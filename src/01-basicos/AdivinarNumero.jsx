@@ -42,9 +42,9 @@ export default function AdivinarNumero() {
           Adivina el número
         </button>
 
-        <button onClick={() => location.reload()}>Reinicia</button>
         <p id="resultado">{result}</p>
         <p id="intentos">Te quedan {tries} intentos</p>
+        <button onClick={() => location.reload()}>Reinicia</button>
       </div>
     </>
   );

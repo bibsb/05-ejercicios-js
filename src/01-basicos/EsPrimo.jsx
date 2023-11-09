@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function EsPrimo() {
-  const [primo, setPrimo] = useState(true);
+  const [primo, setPrimo] = useState(null);
   const [number, setNumber] = useState('');
 
   function esPrimo() {
@@ -11,10 +11,10 @@ export default function EsPrimo() {
         return;
       }
     }
-    
+
     setPrimo(true);
   }
- 
+
   console.log('Primo:', primo);
   return (
     <>
@@ -27,10 +27,12 @@ export default function EsPrimo() {
           onChange={(e) => setNumber(parseInt(e.target.value, 10))}
         />
         <button onClick={() => esPrimo()}>Es primo ?</button>
-        <button onClick={() => location.reload()}>Reinicia</button>
         {primo !== null && (
           <p id="resultado">{primo ? 'Es primo' : 'No es primo'}</p>
         )}
+        <div>
+          <button onClick={() => location.reload()}>Reinicia</button>
+        </div>
       </div>
     </>
   );
