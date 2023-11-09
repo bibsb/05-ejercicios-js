@@ -4,7 +4,7 @@ export default function AdivinarNumero() {
   const [randomNumber] = useState(Math.floor(Math.random() * 100) + 1);
   const [number, setNumber] = useState('');
   const [result, setResult] = useState('');
-  const [tries, setTries] = useState(0);
+  const [tries, setTries] = useState(5);
 
   console.log('NumRandom:', randomNumber);
   function adivinaElNum() {
@@ -20,8 +20,8 @@ export default function AdivinarNumero() {
       } else if (number < randomNumber) {
         setResult('El número que buscas es mayor');
       }
-      setTries(tries + 1);
     }
+    setTries(tries - 1);
   }
 
   return (
@@ -37,14 +37,14 @@ export default function AdivinarNumero() {
         />
         <button
           onClick={() => adivinaElNum()}
-          disabled={tries >= 5 || result === 'Has acertado!'}
+          disabled={tries === 0 || result === 'Has acertado!'}
         >
           Adivina el número
         </button>
 
         <button onClick={() => location.reload()}>Reinicia</button>
         <p id="resultado">{result}</p>
-        <p id="intentos">Has usado {tries} intentos</p>
+        <p id="intentos">Te quedan {tries} intentos</p>
       </div>
     </>
   );
