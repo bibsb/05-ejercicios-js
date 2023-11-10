@@ -1,14 +1,22 @@
 html {
   font-family: 'Montserrat', sans-serif;
+  
 }
+
 #contenedor-basico {
-  /* width: 500px;
-  height: 500px; */
-  margin: auto;
-  padding: 5px;
-  background-color: rgba(144, 238, 175, 0.5);
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(168, 224, 185, 0.3);
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-  margin-bottom: 30px;
+  border: solid grey 1px;
+}
+
+.btn {
+  color: black;
+  border-color: black;
+  &:hover {
+    color: black;
+  }
 }

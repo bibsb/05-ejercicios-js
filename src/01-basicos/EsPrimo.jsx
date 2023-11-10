@@ -18,20 +18,42 @@ export default function EsPrimo() {
   console.log('Primo:', primo);
   return (
     <>
-      <div id="contenedor-basico">
+      <div className="container" id="contenedor-basico">
         <h3>09 - Adivina si es número primo</h3>
-        <input
+        <div className="input-group mb-3 ">
+          <input
+            type="number"
+            className="form-control"
+            placeholder="Introduce un número..."
+            value={number}
+            onChange={(e) => setNumber(parseInt(e.target.value, 10))}
+          />
+          <button
+            className="btn btn-outline-secondary btn-sm"
+            type="button"
+            id="button-addon2"
+            onClick={() => esPrimo()}
+          >
+            Es primo ?
+          </button>
+        </div>
+        {/* <input
           type="number"
           id="number"
           value={number}
           onChange={(e) => setNumber(parseInt(e.target.value, 10))}
-        />
-        <button onClick={() => esPrimo()}>Es primo ?</button>
+        /> */}
+        {/* <button onClick={() => esPrimo()}>Es primo ?</button> */}
         {primo !== null && (
           <p id="resultado">{primo ? 'Es primo' : 'No es primo'}</p>
         )}
         <div>
-          <button onClick={() => location.reload()}>Reinicia</button>
+          <button
+            className="btn btn-outline-secondary btn-sm"
+            onClick={() => location.reload()}
+          >
+            Reinicia
+          </button>
         </div>
       </div>
     </>

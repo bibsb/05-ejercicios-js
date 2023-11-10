@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function MayorDeEdad() {
   const [age, setAge] = useState('');
-  const [country, setCountry] = useState('es');
+  const [country, setCountry] = useState('');
   const [year, setYear] = useState('');
   const [result, setResult] = useState('');
 
@@ -30,40 +30,71 @@ export default function MayorDeEdad() {
 
   return (
     <>
-      <div id="contenedor-basico">
+      <div className="container" id="contenedor-basico">
         <h3>10 - ¿ Es mayor de edad ?</h3>
-        <div>
-          <input
-            type="number"
-            id="age"
-            value={age}
-            onChange={(e) => setAge(parseInt(e.target.value, 10))}
-          />
-          <select
-            id="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          >
-            <option value="es">España</option>
-            <option value="en">EEUU</option>
-          </select>
-          <select
-            id="year"
-            value={year}
-            onChange={(e) => setYear(parseInt(e.target.value, 10))}
-          >
-            <option>Año</option>
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+
+        <div className="container text-center">
+          <div className="row">
+            <div className="col-2">
+              <select
+                className="form-select"
+                id="country"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+              >
+                <option selected>Pais</option>
+                <option value="es">España</option>
+                <option value="en">EEUU</option>
+              </select>
+            </div>
+            <div className="col-2">
+              <select
+                className="form-select"
+                id="year"
+                value={year}
+                onChange={(e) => setYear(parseInt(e.target.value, 10))}
+              >
+                <option>Año</option>
+                {years.map((year) => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="col-8">
+              <div className="input-group mb-3 ">
+                <input
+                  type="number"
+                  className="form-control"
+                  placeholder="Introduce una edad..."
+                  value={age}
+                  onChange={(e) => setAge(parseInt(e.target.value, 10))}
+                />
+                <button
+                  className="btn btn-outline-secondary btn-sm"
+                  type="button"
+                  id="button-addon2"
+                  onClick={() => esMayorDeEdad()}
+                >
+                  Es mayor de edad ?
+                </button>
+              </div>
+              {/* <input
+                type="number"
+                id="age"
+                value={age}
+                onChange={(e) => setAge(parseInt(e.target.value, 10))}
+              /> */}
+            </div>
+          </div>
         </div>
+
         <div>
-          <button onClick={() => esMayorDeEdad()}>Es mayor de edad ?</button>
+          {/* <button onClick={() => esMayorDeEdad()}>Es mayor de edad ?</button> */}
           <p id="resultado">{result}</p>
           <button
+            className="btn btn-outline-secondary btn-sm"
             onClick={() => {
               setAge('');
               setCountry('');
