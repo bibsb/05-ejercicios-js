@@ -7,10 +7,9 @@ import './App.css';
 function App() {
   return (
     <>
-      <h1>Ejercicios Básicos Js</h1>
       <AdivinarNumero />
-      <EsPrimo/>
-      <MayorDeEdad/>
+      <EsPrimo />
+      <MayorDeEdad />
     </>
   );
 }
