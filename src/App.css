@@ -1,6 +1,20 @@
 html {
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+h3,
+p {
+  font-weight: 300;
+}
+input {
+  font-style: italic;
+}
+.btn {
+  color: black;
+  border-color: black;
+  &:hover {
+    color: black;
+  }
 }
 
 #contenedor-basico {
@@ -11,12 +25,4 @@ html {
   background-size: cover;
   border-radius: 5px;
   border: solid grey 1px;
-}
-
-.btn {
-  color: black;
-  border-color: black;
-  &:hover {
-    color: black;
-  }
 }
