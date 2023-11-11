@@ -50,9 +50,9 @@ export default function EsPrimo() {
         <div>
           <button
             className="btn btn-outline-secondary btn-sm"
-            onClick={() => location.reload()}
+            onClick={() => setNumber('')}
           >
-            Reinicia
+            Reiniciar
           </button>
         </div>
       </div>

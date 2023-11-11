@@ -66,9 +66,9 @@ export default function AdivinarNumero() {
         <p id="intentos">Te quedan {tries} intentos</p>
         <button
           className="btn btn-outline-secondary btn-sm"
-          onClick={() => location.reload()}
+          onClick={() => setNumber('')}
         >
-          Reinicia
+          Reiniciar
         </button>
       </div>
     </>

@@ -1,28 +1,27 @@
 import { useState } from 'react';
 
-export default function ListaDeNumeros() {
+export default function ParImpar() {
   const [number, setNumber] = useState('');
-  const [list, setList] = useState([]);
+  const [result, setResult] = useState('');
 
-   function createList() {
-     const tempList = [];
-     for (let i = 0; i <= number; i++) {
-       tempList.push(i);
-       console.log(tempList);
-     }
-     setList(tempList);
-   }
+  function isEven() {
+    if (number % 2 === 0) {
+      setResult('Es par');
+    } else {
+      setResult('Es impar');
+    }
+  }
 
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>1 - Lista de números</h3>
+        <h3>2 - ¿ Es par o impar ?</h3>
 
         <div className="input-group mb-3 ">
           <input
             type="number"
             className="form-control"
-            placeholder="Introduce cuantos números quieres en la lista..."
+            placeholder="Introduce número a comprobar..."
             value={number}
             onChange={(e) => setNumber(parseInt(e.target.value, 10))}
           />
@@ -30,25 +29,19 @@ export default function ListaDeNumeros() {
             className="btn btn-outline-secondary btn-sm"
             type="button"
             id="button-addon2"
-            onClick={() => createList()}
+            onClick={() => isEven()}
             disabled={number === ''}
           >
-            Crear lista
+            Comprobar
           </button>
         </div>
 
-        <ul className="list-group mb-2">
-          {list.map((el) => (
-            <li className="list-group-item" key={el} value={el}>
-              {el}
-            </li>
-          ))}
-        </ul>
+        <p>{result}</p>
         <button
           className="btn btn-outline-secondary btn-sm"
           onClick={() => {
             setNumber('');
-            setList([]);
+            setResult('');
           }}
         >
           Reiniciar

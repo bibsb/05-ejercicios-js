@@ -102,7 +102,7 @@ export default function MayorDeEdad() {
               setYear('');
             }}
           >
-            Reinicia
+            Reiniciar
           </button>
         </div>
       </div>
