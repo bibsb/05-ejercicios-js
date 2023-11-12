@@ -6,9 +6,10 @@ import ListaDeNumeros from './01-basicos/ListaDeNumeros';
 import MayorDeEdad from './01-basicos/MayorDeEdad';
 import ParImpar from './01-basicos/ParImpar';
 import TablaMultiplicar from './01-basicos/TablaMultiplicar';
-import './App.css';
 import SumarPares from './01-basicos/SumarPares';
 import ConversorTemperatura from './01-basicos/Conversor Temperatura';
+import Piramide from './01-basicos/Piramide';
+import './App.css';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <ContarVocales/>
       <SumarPares/>
       <ConversorTemperatura/>
+      <Piramide/>
       <AdivinarNumero />
       <EsPrimo />
       <MayorDeEdad />
