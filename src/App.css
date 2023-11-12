@@ -6,7 +6,7 @@ h3,
 p {
   font-weight: 300;
 }
-input {
+input, textarea {
   font-style: italic;
 }
 .btn {

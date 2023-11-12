@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AdivinarNumero from './01-basicos/AdivinarNumero';
+import ContarVocales from './01-basicos/ContarVocales';
 import EsPrimo from './01-basicos/EsPrimo';
 import ListaDeNumeros from './01-basicos/ListaDeNumeros';
 import MayorDeEdad from './01-basicos/MayorDeEdad';
@@ -13,6 +14,7 @@ function App() {
       <ListaDeNumeros />
       <ParImpar />
       <TablaMultiplicar/>
+      <ContarVocales/>
       <AdivinarNumero />
       <EsPrimo />
       <MayorDeEdad />
