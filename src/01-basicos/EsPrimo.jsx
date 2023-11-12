@@ -33,6 +33,7 @@ export default function EsPrimo() {
             type="button"
             id="button-addon2"
             onClick={() => esPrimo()}
+            disabled={number === ''}
           >
             Es primo ?
           </button>

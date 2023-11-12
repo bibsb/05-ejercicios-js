@@ -42,7 +42,7 @@ export default function AdivinarNumero() {
             type="button"
             id="button-addon2"
             onClick={() => adivinaElNum()}
-            disabled={tries === 0 || result === 'Has acertado!'}
+            disabled={number === '' || tries === 0 || result === 'Has acertado!'}
           >
             Adivina el número
           </button>

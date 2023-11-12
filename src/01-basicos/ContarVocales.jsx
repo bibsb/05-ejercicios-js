@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function ContarVocales() {
   const [sentence, setSentence] = useState('');
   const [result, setResult] = useState(0);
-  const vocals = ['a', 'e', 'i', 'o', 'u', 'ü'];
+  const vocals = ['a', 'e', 'i', 'o', 'u', 'ü', 'á', 'é', 'í', 'ó', 'ú'];
 
   function countVocals() {
     let totalVocals = 0;
@@ -23,17 +23,16 @@ export default function ContarVocales() {
 
         <div className="input-group mb-3 ">
           <div className="form-floating">
-            <textarea
+            <textare
               className="form-control"
               placeholder="Introduce una frase..."
               value={sentence}
               onChange={(e) => setSentence(e.target.value)}
               id="floatingTextarea2"
               style={{ height: '100px' }}
-            ></textarea>
+            />
             <label
               htmlFor="floatingTextarea2"
-              style={{ fontStyle: 'italic', fontWeight: '300' }}
             //   no consigo poner el placeHolder en cursiva, uso lo de arriba por ahora
             >
               Introduce una frase...

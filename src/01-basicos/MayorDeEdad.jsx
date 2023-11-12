@@ -76,6 +76,7 @@ export default function MayorDeEdad() {
                   type="button"
                   id="button-addon2"
                   onClick={() => esMayorDeEdad()}
+                  disabled={age === '' && country === '' && year === ''}
                 >
                   Es mayor de edad ?
                 </button>
