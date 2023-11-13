@@ -19,6 +19,20 @@ label {
   }
 }
 
+.page-item .page-link {
+  color: black;
+  font-weight: 300;
+
+  /* &:active {
+    background-color: grey;
+  } */
+}
+.page-item.active .page-link {
+  background-color: lightgrey;
+  border-color: lightgrey;
+  color: black;
+}
+
 #contenedor-basico {
   margin-bottom: 30px;
   padding: 10px;
