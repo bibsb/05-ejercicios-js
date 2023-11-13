@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 export default function ValidarDNI() {
   const [document, setDocument] = useState('');
-  const [type, setType] = useState('DNI');
-  const [result,setResutl] = useState('');
+  const [type, setType] = useState('');
+  const [result, setResult] = useState('');
 
   const checkDocument = () => {
     if (document.length === 9 && (type === 'DNI' || type === 'NIE')) {
@@ -11,23 +11,27 @@ export default function ValidarDNI() {
       const letter = document.slice(-1).toUpperCase();
 
       if (!isNaN(number)) {
-        checkDNI(number, letter);
-      } else if (letter === 'X' || letter === 'Y' || letter === 'Z') {
-        checkNIE(number, letter);
+        if (type === 'DNI') {
+          checkDNI(number, letter);
+        } else if (letter === 'X' || letter === 'Y' || letter === 'Z') {
+          checkNIE(number, letter);
+        } else {
+          setResult('Introduce un DNI o NIE válido.');
+        }
       } else {
-        setResutl('Introduce un DNI o NIE válido.');
+        setResult('Introduce un DNI o NIE válido.');
       }
     } else {
-      setResutl('El documento debe contener 9 caracteres.');
+      setResult('El documento debe contener 9 caracteres.');
     }
   };
 
   const checkDNI = (number, letter) => {
     const expectedLetter = calculateLetter(number);
     if (letter === expectedLetter) {
-      setResutl('El DNI es correcto.');
+      setResult('El DNI es correcto.');
     } else {
-      setResutl('El DNI es incorrecto.');
+      setResult('El DNI es incorrecto.');
     }
   };
 
@@ -39,16 +43,16 @@ export default function ValidarDNI() {
   const checkNIE = (number, initialLetter) => {
     const expectedLetter = calculateLetterNIE(number, initialLetter);
     if (expectedLetter === initialLetter) {
-      setResutl('El NIE es correcto.');
+      setResult('El NIE es correcto.');
     } else {
-      setResutl('El NIE es incorrecto.');
+      setResult('El NIE es incorrecto.');
     }
   };
 
   const calculateLetterNIE = (number, initialLetter) => {
     const validatedLetters = 'TRWAGMYFPDXBNJZSQVHLCKE';
     const nieNumber = initialLetter + number;
-    return validatedLetters[(nieNumber + initialLetter) % 23];
+    return validatedLetters[nieNumber % 23];
   };
 
   return (
@@ -95,9 +99,7 @@ export default function ValidarDNI() {
             className="btn btn-outline-secondary"
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
-            onClick={() => {
-              checkDocument();
-            }}
+            onClick={() => checkDocument()}
             style={{ borderRadius: '0 4px 4px 0' }}
             disabled={!type || !document}
           >
@@ -109,7 +111,7 @@ export default function ValidarDNI() {
           className="btn btn-outline-secondary btn-sm"
           onClick={() => {
             setDocument('');
-            setType('DNI');
+            setType('');
           }}
         >
           Reiniciar
@@ -122,8 +124,6 @@ export default function ValidarDNI() {
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
