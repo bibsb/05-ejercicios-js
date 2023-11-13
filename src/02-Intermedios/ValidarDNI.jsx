@@ -5,14 +5,6 @@ export default function ValidarDNI() {
   const [type, setType] = useState('DNI');
   const [result,setResutl] = useState('');
 
-  // const myModal = document.getElementById('myModal');
-  // const myInput = document.getElementById('myInput');
-
-  // myModal.addEventListener('shown.bs.modal', () => {
-  //   myInput.focus();
-  // });
-
-
   const checkDocument = () => {
     if (document.length === 9 && (type === 'DNI' || type === 'NIE')) {
       const number = document.slice(0, 8);
@@ -101,6 +93,8 @@ export default function ValidarDNI() {
           <button
             type="button"
             className="btn btn-outline-secondary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
             onClick={() => {
               checkDocument();
             }}
@@ -122,7 +116,15 @@ export default function ValidarDNI() {
         </button>
       </div>
       {/* MODAL */}
-      <div className="modal" tabIndex="-1">
+      <div
+        className="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
