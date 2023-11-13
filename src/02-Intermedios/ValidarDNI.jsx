@@ -1,10 +1,17 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 export default function ValidarDNI() {
   const [document, setDocument] = useState('');
   const [type, setType] = useState('DNI');
+  const [result,setResutl] = useState('');
 
-  const inputRef = useRef(null);
+  // const myModal = document.getElementById('myModal');
+  // const myInput = document.getElementById('myInput');
+
+  // myModal.addEventListener('shown.bs.modal', () => {
+  //   myInput.focus();
+  // });
+
 
   const checkDocument = () => {
     if (document.length === 9 && (type === 'DNI' || type === 'NIE')) {
@@ -16,19 +23,19 @@ export default function ValidarDNI() {
       } else if (letter === 'X' || letter === 'Y' || letter === 'Z') {
         checkNIE(number, letter);
       } else {
-        alert('Introduce un DNI o NIE válido.');
+        setResutl('Introduce un DNI o NIE válido.');
       }
     } else {
-      alert('El documento debe contener 9 caracteres.');
+      setResutl('El documento debe contener 9 caracteres.');
     }
   };
 
   const checkDNI = (number, letter) => {
     const expectedLetter = calculateLetter(number);
     if (letter === expectedLetter) {
-      alert('El DNI es correcto.');
+      setResutl('El DNI es correcto.');
     } else {
-      alert('El DNI es incorrecto.');
+      setResutl('El DNI es incorrecto.');
     }
   };
 
@@ -40,9 +47,9 @@ export default function ValidarDNI() {
   const checkNIE = (number, initialLetter) => {
     const expectedLetter = calculateLetterNIE(number, initialLetter);
     if (expectedLetter === initialLetter) {
-      alert('El NIE es correcto.');
+      setResutl('El NIE es correcto.');
     } else {
-      alert('El NIE es incorrecto.');
+      setResutl('El NIE es incorrecto.');
     }
   };
 
@@ -63,7 +70,6 @@ export default function ValidarDNI() {
             placeholder="Introduce un DNI o NIE..."
             value={document}
             onChange={(e) => setDocument(e.target.value.toUpperCase())}
-            ref={inputRef}
           />
           <button
             type="button"
@@ -97,7 +103,6 @@ export default function ValidarDNI() {
             className="btn btn-outline-secondary"
             onClick={() => {
               checkDocument();
-              inputRef.current.focus();
             }}
             style={{ borderRadius: '0 4px 4px 0' }}
             disabled={!type || !document}
@@ -115,6 +120,33 @@ export default function ValidarDNI() {
         >
           Reiniciar
         </button>
+      </div>
+      {/* MODAL */}
+      <div className="modal" tabIndex="-1">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Validar Documento</h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <p>{result}</p>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
