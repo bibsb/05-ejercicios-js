@@ -19,7 +19,7 @@ export default function EsPrimo() {
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>09 - Adivina si es número primo</h3>
+        <h3>9 - Adivina si es número primo</h3>
         <div className="input-group mb-3 ">
           <input
             type="number"

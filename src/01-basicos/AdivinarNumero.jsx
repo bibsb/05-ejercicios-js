@@ -27,7 +27,7 @@ export default function AdivinarNumero() {
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>08 - Adivinar el número</h3>
+        <h3>8 - Adivinar el número</h3>
         {/* <p>Busca el número entre 1 y 100</p> */}
         <div className="input-group mb-3 ">
           <input
