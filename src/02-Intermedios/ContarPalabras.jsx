@@ -1,37 +1,54 @@
 import { useState } from 'react';
 
 export default function ContadorPalabras() {
+  const [text, setText] = useState('');
+  const [result, setResult] = useState('');
+  function countWords() {
+    const words = text.split(' ');
+    let sum = 0;
+
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].trim() !== '') {
+        sum++;
+      }
+    }
+    setResult(sum);
+  }
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>04 - Contador de palabras</h3>
+        <h3>4 - Contador de palabras</h3>
         {/* <p>Busca el número entre 1 y 100</p> */}
         <div className="input-group mb-3 ">
           <input
-            type="number"
+            type="text"
             className="form-control"
-            placeholder="Introduce un número..."
-            // value={number}
-            // onChange={(e) => setNumber(parseInt(e.target.value, 10))}
+            placeholder="Introduce una frase..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
           <button
             className="btn btn-outline-secondary btn-sm"
             type="button"
             id="button-addon2"
-            // onClick={() => adivinaElNum()}
-            // disabled={
-            //   number === '' || tries === 0 || result === 'Has acertado!'
-            // }
+            onClick={() => countWords()}
+            disabled={!text}
           >
             Adivina el número
           </button>
         </div>
 
-        {/* <p id="resultado">{result}</p>
-        <p id="intentos">Te quedan {tries} intentos</p> */}
+        {result !== '' && (
+          <p id="resultado">
+            Hay <b>{result}</b> palabra(s)
+          </p>
+        )}
+
         <button
           className="btn btn-outline-secondary btn-sm"
-          //   onClick={() => setNumber('')}
+          onClick={() => {
+            setText(''), setResult('');
+          }}
         >
           Reiniciar
         </button>

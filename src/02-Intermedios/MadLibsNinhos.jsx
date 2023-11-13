@@ -4,7 +4,7 @@ export default function MadLibsNinhos() {
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>06 - Mad libs para niños</h3>
+        <h3>6 - Mad libs para niños</h3>
         {/* <p>Busca el número entre 1 y 100</p> */}
         <div className="input-group mb-3 ">
           <input

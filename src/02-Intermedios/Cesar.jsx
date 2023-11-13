@@ -4,7 +4,7 @@ export default function Cesar() {
   return (
     <>
       <div className="container" id="contenedor-basico">
-        <h3>05 - Cifrado César</h3>
+        <h3>5 - Cifrado César</h3>
         {/* <p>Busca el número entre 1 y 100</p> */}
         <div className="input-group mb-3 ">
           <input
