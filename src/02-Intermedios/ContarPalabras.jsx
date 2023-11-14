@@ -16,7 +16,7 @@ export default function ContadorPalabras() {
   }
   return (
     <>
-      <div className="container" id="contenedor-basico">
+      <div className="container" id="contenedor-intermedio">
         <h3>4 - Contador de palabras</h3>
         {/* <p>Busca el número entre 1 y 100</p> */}
         <div className="input-group mb-3 ">

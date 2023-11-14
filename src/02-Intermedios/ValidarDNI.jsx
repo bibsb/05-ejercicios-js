@@ -57,7 +57,7 @@ export default function ValidarDNI() {
 
   return (
     <>
-      <div className="container" id="contenedor-basico">
+      <div className="container" id="contenedor-intermedio">
         <h3>1 - Validador de DNI</h3>
         <div className="input-group mb-3">
           <input

@@ -20,7 +20,7 @@ export default function ReemplazarText() {
 
   return (
     <>
-      <div className="container" id="contenedor-basico">
+      <div className="container" id="contenedor-intermedio">
         <h3>3 - Reemplazador de texto</h3>
 
         <div className="form-floating mb-3">
@@ -71,7 +71,7 @@ export default function ReemplazarText() {
         {result !== '' && (
           <div>
             <p>Frase modificada:</p>
-            <p style={{ textAlign: 'right'}}>
+            <p style={{ textAlign: 'center' }}>
               <b>{result}</b>
             </p>
           </div>

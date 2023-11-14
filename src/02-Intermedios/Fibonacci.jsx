@@ -35,7 +35,7 @@ export default function Fibonacci() {
 
   return (
     <>
-      <div className="container" id="contenedor-basico">
+      <div className="container" id="contenedor-intermedio">
         <h3>2 - Comprobar números Fibonacci</h3>
         <div className="input-group mb-3 ">
           <input

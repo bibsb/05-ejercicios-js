@@ -42,3 +42,13 @@ label {
   border-radius: 5px;
   border: solid grey 1px;
 }
+
+#contenedor-intermedio {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(236, 231, 148, 0.3);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  border: solid grey 1px;
+}
