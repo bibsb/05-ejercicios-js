@@ -10,7 +10,7 @@ export default function ReemplazarText() {
     const words = sentence.split(' ');
 
     for (let i = 0; i < words.length; i++) {
-      if (words[i] === oldWord) {
+      if (words[i].toLowerCase() === oldWord.toLowerCase()) {
         words[i] = newWord;
       }
     }

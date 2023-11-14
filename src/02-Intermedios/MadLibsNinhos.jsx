@@ -15,7 +15,7 @@ export default function MadLibsNinhos() {
   return (
     <>
       <div className="container" id="contenedor-intermedio">
-        <h3>3 - Reemplazador de texto</h3>
+        <h3>6 - Mad Libs para niños</h3>
 
         <p>Introduce los siguientes elementos para crear una historia:</p>
         <div className="row mb-3 d-flex justify-content-center">

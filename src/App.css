@@ -33,22 +33,24 @@ label {
   color: black;
 }
 
-#contenedor-basico {
+#contenedor-basico,
+#contenedor-intermedio,
+#contenedor-avanzado {
   margin-bottom: 30px;
   padding: 10px;
-  background-color: rgba(168, 224, 185, 0.3);
   background-position: center;
   background-size: cover;
   border-radius: 5px;
   border: solid grey 1px;
 }
+#contenedor-basico {
+  background-color: rgba(168, 224, 185, 0.3);
+}
 
 #contenedor-intermedio {
-  margin-bottom: 30px;
-  padding: 10px;
   background-color: rgba(236, 231, 148, 0.3);
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-  border: solid grey 1px;
+}
+
+#contenedor-avanzado {
+  background-color: rgba(218, 119, 106, 0.3);
 }
