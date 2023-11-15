@@ -18,7 +18,7 @@ export default function MadLibsNinhos() {
         <h3>6 - Mad Libs para niños</h3>
 
         <p>Introduce los siguientes elementos para crear una historia:</p>
-        <div className="row mb-3 d-flex justify-content-center">
+        <div className="row mb-3">
           <div className="col-3">
             <input
               type="text"
@@ -37,7 +37,7 @@ export default function MadLibsNinhos() {
               onChange={(e) => setAnimal(e.target.value)}
             />
           </div>
-          <div className="col-3">
+          {/* <div className="col-3">
             <input
               type="text"
               className="form-control"
@@ -45,7 +45,6 @@ export default function MadLibsNinhos() {
               value={color}
               onChange={(e) => setColor(e.target.value)}
             />
-            <div />
           </div>
           <div className="col-3">
             <button
@@ -58,6 +57,27 @@ export default function MadLibsNinhos() {
             >
               Crear
             </button>
+          </div> */}
+          <div className="col-6">
+            <div className="input-group mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Color..."
+                value={color}
+                onChange={(e) => setColor(e.target.value)}
+              />
+              <button
+                className="btn btn-outline-secondary btn-sm"
+                type="button"
+                id="button-addon2"
+                style={{ paddingLeft: 50, paddingRight: 50 }}
+                onClick={() => create()}
+                disabled={!name || !animal || !color}
+              >
+                Crear
+              </button>
+            </div>
           </div>
         </div>
 

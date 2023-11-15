@@ -18,6 +18,7 @@ import ContadorPalabras from './02-Intermedios/ContarPalabras';
 import Cesar from './02-Intermedios/Cesar';
 import MadLibsNinhos from './02-Intermedios/MadLibsNinhos';
 import CalcularEdadPerro from './03-Avanzados/CalcularEdadPerro';
+import Palindromos from './03-Avanzados/Palindromos';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -46,7 +47,8 @@ function App() {
     <Cesar/>,
     <MadLibsNinhos/>,
 
-    <CalcularEdadPerro/>
+    <CalcularEdadPerro/>,
+    <Palindromos/>
   ].slice(indexOfFirstComponent, indexOfLastComponent);
 
   const handlePageChange = (newPage) => {
