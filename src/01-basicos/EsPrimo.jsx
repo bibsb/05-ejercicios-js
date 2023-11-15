@@ -46,7 +46,9 @@ export default function EsPrimo() {
         /> */}
         {/* <button onClick={() => esPrimo()}>Es primo ?</button> */}
         {primo !== null && (
-          <p id="resultado">{primo ? 'Es primo' : 'No es primo'}</p>
+          <p style={{ textAlign: 'center', marginTop: '10px' }}>
+            {primo ? 'Es primo' : 'No es primo'}
+          </p>
         )}
         <div>
           <button

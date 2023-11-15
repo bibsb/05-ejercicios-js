@@ -36,7 +36,9 @@ export default function Palindromos() {
           </button>
         </div>
 
-        {result !== '' && <p id="resultado">{result}</p>}
+        {result !== '' && (
+          <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
+        )}
 
         <button
           className="btn btn-outline-secondary btn-sm"

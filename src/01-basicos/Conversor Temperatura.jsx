@@ -60,7 +60,7 @@ export default function ConversorTemperatura() {
         </button>
       </div>
       {result !== '' && (
-        <p>
+        <p style={{ textAlign: 'center', marginTop: '10px' }}>
           {temperature} Cº son <strong>{result} Fº</strong>
         </p>
       )}

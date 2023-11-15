@@ -21,7 +21,6 @@ export default function SumarPares() {
     <>
       <div className="container" id="contenedor-basico">
         <h3>5 - Suma los números pares</h3>
-
         <div className="input-group mb-3 ">
           <input
             type="number"
@@ -42,12 +41,11 @@ export default function SumarPares() {
         </div>
 
         {result !== 0 && (
-          <p>
+          <p style={{ textAlign: 'center', marginTop: '10px' }}>
             {`Hay ${count} números pares desde el 1 al ${number} y suman `}
             <strong>{result}</strong>
           </p>
         )}
-
         <button
           className="btn btn-outline-secondary btn-sm"
           onClick={() => {

@@ -56,7 +56,7 @@ export default function Fibonacci() {
           </button>
         </div>
 
-        <p id="resultado">{result}</p>
+        <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
 
         <button
           className="btn btn-outline-secondary btn-sm"

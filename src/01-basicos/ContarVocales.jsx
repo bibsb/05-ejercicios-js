@@ -23,7 +23,7 @@ export default function ContarVocales() {
 
         <div className="input-group mb-3 ">
           <div className="form-floating">
-            <textare
+            <textarea
               className="form-control"
               placeholder="Introduce una frase..."
               value={sentence}
@@ -33,7 +33,7 @@ export default function ContarVocales() {
             />
             <label
               htmlFor="floatingTextarea2"
-            //   no consigo poner el placeHolder en cursiva, uso lo de arriba por ahora
+              //   no consigo poner el placeHolder en cursiva, uso lo de arriba por ahora
             >
               Introduce una frase...
             </label>
@@ -48,7 +48,12 @@ export default function ContarVocales() {
             Contar
           </button>
         </div>
-        {result !== 0 && <p>{`Esta frase tiene ${result} vocales`}</p>}
+
+        {result !== 0 && (
+          <p
+            style={{ textAlign: 'center', marginTop: '10px' }}
+          >{`Esta frase tiene ${result} vocales`}</p>
+        )}
         <button
           className="btn btn-outline-secondary btn-sm"
           onClick={() => {

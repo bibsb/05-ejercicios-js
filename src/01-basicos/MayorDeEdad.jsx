@@ -93,7 +93,7 @@ export default function MayorDeEdad() {
 
         <div>
           {/* <button onClick={() => esMayorDeEdad()}>Es mayor de edad ?</button> */}
-          <p>{result}</p>
+          <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
           <button
             className="btn btn-outline-secondary btn-sm"
             onClick={() => {

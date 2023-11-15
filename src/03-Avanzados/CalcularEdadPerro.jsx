@@ -76,7 +76,7 @@ export default function CalcularEdadPerro() {
           </button>
         </div>
 
-        <p>{result}</p>
+        <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
 
         <button
           className="btn btn-outline-secondary btn-sm"

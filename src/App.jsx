@@ -19,12 +19,18 @@ import Cesar from './02-Intermedios/Cesar';
 import MadLibsNinhos from './02-Intermedios/MadLibsNinhos';
 import CalcularEdadPerro from './03-Avanzados/CalcularEdadPerro';
 import Palindromos from './03-Avanzados/Palindromos';
+import IMC from './03-Avanzados/IMC';
+import Propinas from './03-Avanzados/Propinas';
+import InteresCompuesto from './03-Avanzados/InteresCompuesto';
+import ConversorUnidades from './03-Avanzados/ConversorUnidades';
+import ReproduccionMusica from './03-Avanzados/ReproduccionMusica';
+import CaloriasQuemadas from './03-Avanzados/CaloriasQuemadas';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const componentsPerPage = 5;
-  const totalComponents = 16;
+  const totalComponents = 25;
 
   const indexOfLastComponent = currentPage * componentsPerPage;
   const indexOfFirstComponent = indexOfLastComponent - componentsPerPage;
@@ -48,7 +54,13 @@ function App() {
     <MadLibsNinhos/>,
 
     <CalcularEdadPerro/>,
-    <Palindromos/>
+    <InteresCompuesto/>,
+    <Palindromos/>,
+    <IMC/>,
+    <Propinas/>,
+    <ConversorUnidades/>,
+    <ReproduccionMusica/>,
+    <CaloriasQuemadas/>
   ].slice(indexOfFirstComponent, indexOfLastComponent);
 
   const handlePageChange = (newPage) => {

@@ -36,7 +36,11 @@ export default function ParImpar() {
           </button>
         </div>
 
-        <p>{result}</p>
+        {result !== '' && (
+          <div>
+            <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
+          </div>
+        )}
         <button
           className="btn btn-outline-secondary btn-sm"
           onClick={() => {

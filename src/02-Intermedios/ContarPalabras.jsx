@@ -39,7 +39,7 @@ export default function ContadorPalabras() {
         </div>
 
         {result !== '' && (
-          <p id="resultado">
+          <p style={{ textAlign: 'center', marginTop: '10px' }}>
             Hay <b>{result}</b> palabra(s)
           </p>
         )}
