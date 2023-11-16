@@ -19,7 +19,7 @@ export default function Propinas() {
   return (
     <>
       <div className="container" id="contenedor-avanzado">
-        <h3>5 - Calculadora de Propinas</h3>
+        <h3>5 - Calculadora de propinas</h3>
 
         <div className="row">
           <div className="col-5">
