@@ -9,7 +9,6 @@ import TablaMultiplicar from './01-basicos/TablaMultiplicar';
 import SumarPares from './01-basicos/SumarPares';
 import ConversorTemperatura from './01-basicos/Conversor Temperatura';
 import Piramide from './01-basicos/Piramide';
-import './App.css';
 import Paginator from './Paginator';
 import ValidarDNI from './02-Intermedios/ValidarDNI';
 import Fibonacci from './02-Intermedios/Fibonacci';
@@ -25,6 +24,7 @@ import InteresCompuesto from './03-Avanzados/InteresCompuesto';
 import ConversorUnidades from './03-Avanzados/ConversorUnidades';
 import ReproduccionMusica from './03-Avanzados/ReproduccionMusica';
 import CaloriasQuemadas from './03-Avanzados/CaloriasQuemadas';
+import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);

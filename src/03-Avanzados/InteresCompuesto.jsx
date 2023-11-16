@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function InteresCompuesto() {
   const [initCapital, setInitCapital] = useState('');
@@ -18,11 +18,6 @@ export default function InteresCompuesto() {
     <>
       <div className="container" id="contenedor-avanzado">
         <h3>2 - Calculadora de interés compuesto</h3>
-        <h1>WIP tengo mal la , </h1>
-        <p>
-          url dnd he mirado
-          https://www.gerencie.com/formula-para-calcular-el-interes-compuesto.html
-        </p>
 
         <div className="row mb-3">
           <div className="col-3">
@@ -70,6 +65,11 @@ export default function InteresCompuesto() {
         {result !== '' && (
           <div>
             <p style={{ textAlign: 'center', marginTop: '10px' }}>{result}</p>
+            <h1>WIP tengo mal la , </h1>
+            <p>
+              url dnd he mirado
+              https://www.gerencie.com/formula-para-calcular-el-interes-compuesto.html
+            </p>
           </div>
         )}
 
